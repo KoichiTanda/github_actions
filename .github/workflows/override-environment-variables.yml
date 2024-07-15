@@ -12,4 +12,5 @@ jobs:
         run: echo "${EXAMPLE}"           # オーバーライドされた環境変数を出力
       - env:
           EXAMPLE: new # ステップレベルで環境変数をオーバーライド
+        run: echo "test"
       - run: echo "${EXAMPLE}"           # オーバーライドされた環境変数を出力
