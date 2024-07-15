@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  # UTCなので実際は朝9時の実行を期待
+  schedule:
+    - cron: "*/10 * * * *"
+  # 手動実行用の記述
+  workflow_dispatch:
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print date
+        run: |
+          # UTC
+          echo $(date '+%Y-%m-%d %H:%M:%S(%z)')
+          # JST
+          echo $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S(%z)')
