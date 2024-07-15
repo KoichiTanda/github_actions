@@ -14,3 +14,5 @@ jobs:
           EXAMPLE: new # ステップレベルで環境変数をオーバーライド
         run: echo "test"
       - run: echo "${EXAMPLE}"           # オーバーライドされた環境変数を出力
+      - run: echo "${{ github.actor }}"           # オーバーライドされた環境変数を出力
+      - run: echo "${GITHUB_ACTOR}"           # オーバーライドされた環境変数を出力
