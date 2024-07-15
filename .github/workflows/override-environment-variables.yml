@@ -10,3 +10,6 @@ jobs:
       - env:
           EXAMPLE: Defined by step level # ステップレベルで環境変数をオーバーライド
         run: echo "${EXAMPLE}"           # オーバーライドされた環境変数を出力
+      - env:
+          EXAMPLE: new # ステップレベルで環境変数をオーバーライド
+      - run: echo "${EXAMPLE}"           # オーバーライドされた環境変数を出力
