@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{ github.actor }}" # githubコンテキストの参照
-      - run: echo "${{ github.event }}" # githubコンテキストの参照
+      - run: echo "${{ github.event.pull_request.title }}" # githubコンテキストの参照
