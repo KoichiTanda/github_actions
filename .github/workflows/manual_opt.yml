@@ -1,0 +1,15 @@
+name: Manual
+on:
+  workflow_dispatch:                       # 手動実行イベント
+    inputs:
+      log-level:
+        type: choice
+        options:
+          - info
+          - warn
+          - error
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ inputs.log-level }}" # 入力パラメータ「greeting」の参照
