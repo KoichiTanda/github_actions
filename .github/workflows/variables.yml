@@ -7,3 +7,4 @@ jobs:
       USERNAME: ${{ vars.USERNAME }} # Variablesの参照
     steps:
       - run: echo "${USERNAME}"
+      - run: echo "${USERNAME2}"
