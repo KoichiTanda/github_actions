@@ -9,4 +9,4 @@ jobs:
       - run: echo "${USERNAME}"
       - run: echo "${USERNAME2}"
       - run: echo "${USERNAME}"
-      - run: echo "${USERNAME2}"
+      - run: echo "${USER}"
