@@ -5,7 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       USERNAME: ${{ vars.USERNAME }} # Variablesの参照
+      USERNAME2: ${{ vars.USERNAME2 }} # Variablesの参照
     steps:
+      - run: echo "${USERTAN}"
       - run: echo "${USERNAME}"
       - run: echo "${USERNAME2}"
       - run: echo "${USERNAME}"
