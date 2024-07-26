@@ -6,3 +6,6 @@ jobs:
     steps:
       - run: echo "Hello"
         if: ${{ contains(github.run_id, '1') }} # ワークフロー実行IDで分岐
+      - run: echo ${ID}
+        env:
+          ID: ${{ github.run_id }} 
